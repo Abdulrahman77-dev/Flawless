@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Cart</title>
+    <link rel="icon" type="image/x-icon" href="imgs/icon.png">
+    <link rel="stylesheet" href="css/cart.css">
+</head>
+<body>
+    <header>
+        <div class="logo"><a href="index.html"><img src="imgs/logo_w.png" alt=""></a></div>
+    </header>
+
+    <main>
+        <section class="cart">
+            <h1>Your Cart</h1>
+            <div class="cartContainer">
+                <table class="cart-table">
+                    <thead>
+                        <tr>
+                            <th>Product</th>
+                            <th>Quantity</th>
+                            <th>Price</th>
+                            <th>Total</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody class="item" id="cart-items">
+                        <!-- Cart items will be dynamically generated -->
+                    </tbody>
+                </table>
+            </div>
+            
+            <div class="cart-summary">
+                <h2>Cart Summary</h2>
+                <p><strong>Total Items:</strong> <span id="total-items">0</span></p>
+                <p><strong>Total Price:</strong> $<span id="total-price">0.00</span></p>
+                <button id="checkout-button">Proceed to Checkout</button>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Flawless. All Rights Reserved.</p>
+    </footer>
+
+    <script src="js/cart.js"></script>
+</body>
+</html>

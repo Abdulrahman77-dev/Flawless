@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flawless</title>
+    <link rel="icon" type="image/x-icon" href="imgs/icon.png">
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        body{
+            background-image: url('imgs/back.jpg');
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: cover;
+        }
+    </style>
+   
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo"><a href="index.html"><img src="imgs/logo_w.png" alt=""></a></div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="#products">Products</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <div class="cart">
+                <a href="cart.html">Cart <img width="15px" src="imgs/cart.png" alt=""></a>
+            </div>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Discover Your Beauty</h1>
+            <p>Explore a wide range of cosmetics to enhance your beauty and confidence.</p>
+            <a href="#products" class="btn">Shop Now</a>
+        </div>
+        <div class="video">
+            <video controls>
+                <source src="vid.mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+    </section>
+
+    <section id="products" class="products">
+        <h2>Our Products</h2>
+        <div class="product-list">
+            <!-- Example Product Cards -->
+            <div class="product-card">
+                <img src="imgs/lipstick.jpg" alt="Lipstick">
+                <h3>Lipstick</h3>
+                <p>$15.99</p>
+                <button>Add to Cart</button>
+            </div>
+            <div class="product-card">
+                <img src="imgs/Foundation.jpg" alt="Foundation">
+                <h3>Foundation</h3>
+                <p>$25.99</p>
+                <button>Add to Cart</button>
+            </div>
+            <div class="product-card">
+                <img src="imgs/eyeliner.avif" alt="Eyeliner">
+                <h3>Eyeliner</h3>
+                <p>$9.99</p>
+                <button>Add to Cart</button>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="about">
+        <h2>About Us</h2>
+        <p>At Flawless, we are dedicated to providing high-quality cosmetics that meet your unique needs. Our products are cruelty-free and carefully curated to ensure customer satisfaction.</p>
+    </section>
+
+    <section id="contact" class="contact">
+        <h2>Contact Us</h2>
+        <form>
+            <input type="text" placeholder="Your Name" required>
+            <input type="email" placeholder="Your Email" required>
+            <textarea placeholder="Your Message" required></textarea>
+            <button type="submit">Send Message</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Flawless. All Rights Reserved.</p>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
