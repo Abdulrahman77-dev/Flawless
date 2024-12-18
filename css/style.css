@@ -22,8 +22,12 @@ header {
     background: linear-gradient(#333,#1e1e1e);
 }
 
-.logo img {
-    width: 200px;
+header .logo img {
+    width: 250px;
+    display: flex;
+    align-items: center;
+    justify-self: left;
+    margin-left: 20px;
 }
 
 .navbar {
@@ -231,12 +235,20 @@ footer {
 /* Media Queries */
 
 /* Tablet Layout */
-@media (max-width: 1024px) {
+@media only screen and (max-width: 768px) {
     .navbar {
         flex-direction: column;
         align-items: center;
     }
 
+    .nav-links {
+        display: none;
+    }
+
+    .logo img {
+        width: 100%;
+        margin: 10px;
+    }
 
     .hero {
         flex-direction: column;
@@ -253,13 +265,15 @@ footer {
 }
 
 /* Mobile Layout */
-@media (max-width: 768px) {
+@media only screen and (max-width: 600px) {
     header {
         padding: 10px;
     }
 
     .logo img {
-        width: 150px;
+        display: flex;
+        align-items: center;
+        justify-self: left;
     }
 
     .nav-links {
@@ -268,10 +282,11 @@ footer {
 
     .hero {
         padding: 50px 20px;
+        align-items: center;
     }
 
     .video {
-        width: 100%;
+        width: 80%;
         height: auto;
     }
 
