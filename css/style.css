@@ -111,12 +111,14 @@ header {
     background: #1e1e1e;
 }
 
-.video {
+.video video{
     border: #1e1e1e;
     border-width: 5px;
     border-style: solid;
     border-radius: 5px;
-    margin: 0px 50px;
+    width:99.8%;
+    height: auto;
+    margin: 0.5% 0 0 0;
     cursor: pointer;
 }
 
