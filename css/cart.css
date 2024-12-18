@@ -21,8 +21,11 @@ header {
 }
 
 header .logo img {
-    width: 200px;
-    margin: 0px 140px;
+    width: 250px;
+    display: flex;
+    align-items: center;
+    justify-self: left;
+    margin-left: 20px;
 }
 
 .navbar {
@@ -128,9 +131,10 @@ footer {
 /* Media Queries */
 
 /* Tablet Layout */
-@media (max-width: 1024px) {
+@media only screen and (max-width: 768px) {
     header .logo img {
-        width: 150px;
+        align-items: center;
+        display: flex;
     }
 
     .cart {
@@ -147,7 +151,14 @@ footer {
 }
 
 /* Mobile Layout */
-@media (max-width: 768px) {
+@media only screen and (max-width: 600px) {
+
+    header .logo img {
+        display: flex;
+        align-items: center;
+        justify-self: center;
+    }
+
     .cart {
         margin: 20px;
         padding: 10px;
@@ -160,10 +171,6 @@ footer {
     #checkout-button {
         font-size: 0.9rem;
         padding: 8px 12px;
-    }
-
-    header {
-        text-align: center;
     }
 
     footer {
