@@ -41,7 +41,11 @@ header .logo img {
     border-radius: 10px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
-
+.cartContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 .cart h1 {
     margin-bottom: 20px;
     color: #1e1e1e;
@@ -121,7 +125,7 @@ footer {
     bottom: 0px;
     width: 97%;
     text-align: center;
-    padding: 20px;
+    padding: 20px 0px;
     background: #333;
     color: white;
     
@@ -138,6 +142,7 @@ footer {
 
     .cart {
         padding: 15px;
+        width: 90%;
     }
 
     .cart-table th, .cart-table td {
@@ -158,14 +163,20 @@ footer {
         justify-self: center;
     }
 
-    .cart {
-        margin: 20px;
-        padding: 10px;
+
+    .cartContainer {
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
 
+    .counter {
+        display: flex;
+    }
     .cart-summary p {
         font-size: 0.9rem;
     }
+
 
     #checkout-button {
         font-size: 0.9rem;
@@ -173,7 +184,7 @@ footer {
     }
 
     footer {
-        padding: 10px;
+        padding: 20px 0px;
     }
 }
 
