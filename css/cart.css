@@ -10,11 +10,10 @@ body {
     background-color: #f4f4f4;
     color: #333;
     margin: 0;
-    
 }
 
 header {
-    background: linear-gradient(#333,#1e1e1e);
+    background: linear-gradient(#333, #1e1e1e);
     padding: 12px 20px;
     color: white;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -22,15 +21,6 @@ header {
 
 header .logo img {
     width: 250px;
-    display: flex;
-    align-items: center;
-    justify-content: left;
-}
-
-.navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
 }
 
 .cart {
@@ -40,12 +30,9 @@ header .logo img {
     background: white;
     border-radius: 10px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
 }
-.cartContainer {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
+
 .cart h1 {
     margin-bottom: 20px;
     color: #1e1e1e;
@@ -68,27 +55,23 @@ header .logo img {
     background: #1e1e1e;
     color: white;
 }
-
+.item button img {
+    max-width: 20px;
+}
 .item button {
-
     border: none;
     background: #1e1e1e;
-    padding: 5px 5px;
-    margin: 0px 10px;
+    padding: 5px;
     color: white;
-    border-radius: 2px;
-    text-align: center;
-    font-weight: 700;
-
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s;
 }
 
 .item button:hover {
-    background: linear-gradient(#333,white);
+    background: linear-gradient(#333, white);
     color: #1e1e1e;
-    border: #1e1e1e;
-    border: thin;
-    cursor: pointer;
-    transition: 0.2s;
 }
 
 .cart-summary {
@@ -104,7 +87,6 @@ header .logo img {
     background: #1e1e1e;
     color: white;
     border: none;
-     
     padding: 10px 20px;
     border-radius: 5px;
     cursor: pointer;
@@ -114,77 +96,115 @@ header .logo img {
 #checkout-button:hover {
     background: white;
     color: #1e1e1e;
-    border: solid;
-    border-width: 1px;
-    border-color: #1e1e1e;
+    border: solid 1px #1e1e1e;
 }
 
 footer {
-
-    position: absolute;
-    bottom: 0px;
-    width: 97%;
     text-align: center;
-    padding: 20px 0px;
+    padding: 20px;
     background: #333;
     color: white;
-    
 }
 
 /* Media Queries */
 
-/* Tablet Layout */
-@media only screen and (max-width: 768px) {
-    header .logo img {
-        align-items: center;
-        display: flex;
-    }
-
+/* Max Width: 1280px */
+@media (max-width: 1280px) {
     .cart {
         padding: 15px;
-        width: 90%;
     }
-
     .cart-table th, .cart-table td {
         padding: 8px;
     }
-
+    .cart-summary {
+        font-size: 0.9rem;
+    }
     #checkout-button {
         padding: 8px 15px;
     }
 }
 
-/* Mobile Layout */
-@media only screen and (max-width: 600px) {
-
-    header .logo img {
-        display: flex;
-        align-items: center;
-        justify-self: center;
+/* Max Width: 768px */
+@media (max-width: 768px) {
+    .cart {
+        width: 90%;
     }
-
-
-    .cartContainer {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-
-    .counter {
-        display: flex;
-    }
-    .cart-summary p {
+    .cart-table th, .cart-table td {
         font-size: 0.9rem;
     }
-
-
     #checkout-button {
         font-size: 0.9rem;
-        padding: 8px 12px;
-    }
-
-    footer {
-        padding: 20px 0px;
     }
 }
 
+/* Max Width: 425px */
+@media (max-width: 425px) {
+    .cart h1 {
+        font-size: 1.5rem;
+    }
+    .cart-summary p {
+        font-size: 0.8rem;
+    }
+}
+
+/* Max Width: 375px */
+@media (max-width: 375px) {
+    .cart h1 {
+        font-size: 1.5rem;
+        margin-bottom: 15px;
+    }
+
+    /* Ensure the table fits within its container */
+    .cart-table {
+        width: 100%;
+        table-layout: fixed;
+        overflow-x: auto;
+    }
+
+    .cart-table th, .cart-table td {
+        padding: 8px;
+        font-size: 0.8rem;
+    }
+
+    .cart-summary p {
+        font-size: 0.8rem;
+    }
+
+    #checkout-button {
+        padding: 8px 15px;
+        font-size: 0.9rem;
+    }
+}
+
+/* Max Width: 320px */
+@media (max-width: 320px) {
+    .cart {
+        padding: 10px;
+        margin: 10px;
+    }
+
+    .cart h1 {
+        font-size: 1.4rem;
+        margin-bottom: 10px;
+    }
+
+    .cart-table {
+        width: 100%;
+        table-layout: fixed;
+        overflow-x: auto;
+    }
+
+    .cart-table th, .cart-table td {
+        padding: 6px;
+        font-size: 0.75rem;
+    }
+
+    .cart-summary p {
+        font-size: 0.75rem;
+    }
+
+    #checkout-button {
+        padding: 6px 12px;
+        font-size: 0.8rem;
+    }
+}
