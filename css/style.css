@@ -4,29 +4,23 @@ body, h1, h2, h3, p, ul, li, a, button, input, textarea {
     padding: 0;
     box-sizing: border-box;
 }
-* {
-    font-family: Arial, sans-serif;
 
-}
 body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
     color: #333;
     margin: 0;
-    
+    background-color: #f4f4f4;
 }
 
 header {
     padding: 10px 20px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    background: linear-gradient(#333,#1e1e1e);
+    background: linear-gradient(#333, #1e1e1e);
 }
 
 header .logo img {
     width: 250px;
-    display: flex;
-    align-items: center;
-    justify-content: left;
 }
 
 .navbar {
@@ -45,13 +39,6 @@ header .logo img {
 .nav-links li {
     margin-left: 20px;
 }
-.nav-links li a:hover {
-
-    color: white;
-    transition: 0.2s;
-    text-shadow: 0 0px 7px rgba(255, 255, 255, 0.5);
-
-}
 
 .nav-links a {
     text-decoration: none;
@@ -61,7 +48,6 @@ header .logo img {
 }
 
 .nav-links a:hover {
-    color: white;
     text-shadow: 0 0px 7px rgba(255, 255, 255, 0.5);
 }
 
@@ -77,17 +63,19 @@ header .logo img {
 .cart a:hover {
     background: #1e1e1e;
     color: white;
-    border: solid;
-    border-width: 1px;
+    border: solid 1px;
 }
 
 .hero {
-    color: #1e1e1e;
-    text-align: left;
-    padding: 100px 50px;
     display: flex;
-    background: linear-gradient(white,#CDCDCD);
+    justify-content: space-between;
+    align-items: center;
+    padding: 50px;
+    background: linear-gradient(white, #CDCDCD);
+}
 
+.hero-content {
+    max-width: 600px;
 }
 
 .hero-content h1 {
@@ -114,26 +102,20 @@ header .logo img {
     background: #1e1e1e;
 }
 
-.video video{
-    border: #1e1e1e;
-    border-width: 5px;
-    border-style: solid;
-    border-radius: 5px;
-    width:99.8%;
+.video video {
+    width: 100%;
     height: auto;
-    margin: 1% 0 0 1%;
-    cursor: pointer;
+    border: 5px solid #1e1e1e;
+    border-radius: 5px;
 }
 
 .products {
-
     max-width: 1200px;
     margin: 50px auto;
     padding: 20px;
     text-align: center;
     background: linear-gradient(#CDCDCD, white);
     border-radius: 10px;
-
 }
 
 .products h2 {
@@ -230,78 +212,86 @@ footer {
     color: white;
 }
 
-
 /* Media Queries */
 
-/* Tablet Layout */
-@media only screen and (max-width: 768px) {
+/* Max Width: 2560px */
+@media (max-width: 2560px) {
+    .hero {
+        flex-direction: row;
+    }
+}
+
+/* Max Width: 1440px */
+@media (max-width: 1440px) {
+    .navbar {
+        max-width: 1200px;
+    }
+    .hero-content h1 {
+        font-size: 2.5rem;
+    }
+}
+
+/* Max Width: 1280px */
+@media (max-width: 1280px) {
+    .hero {
+        flex-direction: column;
+    }
+
+    .hero-content a{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: fit-content;
+        margin: 10px;
+    }
+    .product-list {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Max Width: 768px */
+@media (max-width: 768px) {
     .navbar {
         flex-direction: column;
         align-items: center;
     }
-
     .nav-links {
         display: none;
     }
-
-    .logo img {
-        width: 100%;
-        margin: 10px;
-    }
-
-    .hero {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    .hero-content {
-        padding: 20px;
-    }
-
-    .video {
-        margin: 20px auto;
-    }
-}
-
-/* Mobile Layout */
-@media only screen and (max-width: 600px) {
-    header {
-        padding: 10px;
-    }
-
-    .logo img {
-        display: flex;
-        align-items: center;
-        justify-self: left;
-    }
-
-    .nav-links {
-        display: none;
-    }
-
     .hero {
         padding: 50px 20px;
-        align-items: center;
     }
-
-    .video {
-        width: 80%;
-        height: auto;
-    }
-
     .product-list {
         grid-template-columns: 1fr;
     }
+}
 
-    .product-card img {
-        height: 150px;
+/* Max Width: 425px */
+@media (max-width: 425px) {
+    .hero-content h1 {
+        font-size: 1.8rem;
     }
-
-    .products {
-        padding: 10px;
+    .hero-content p {
+        font-size: 1rem;
     }
+}
 
-    footer {
-        padding: 10px;
+/* Max Width: 375px */
+@media (max-width: 375px) {
+    header {
+        padding: 5px;
+    }
+    .hero {
+        padding: 30px 10px;
+    }
+}
+
+/* Max Width: 320px */
+@media (max-width: 320px) {
+    .hero-content h1 {
+        font-size: 1.5rem;
+    }
+    .hero-content p {
+        font-size: 0.9rem;
     }
 }
