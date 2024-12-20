@@ -22,9 +22,9 @@ function renderCart() {
         row.innerHTML = `
             <td>${item.name}</td>
             <td class="counter">
-                <button class="quantity-btn" data-id="${item.id}" data-change="1">+</button>
-                ${item.quantity}
                 <button class="quantity-btn" data-id="${item.id}" data-change="-1">-</button>
+                ${item.quantity}
+                <button class="quantity-btn" data-id="${item.id}" data-change="1">+</button>
             </td>
             <td>$${item.price.toFixed(2)}</td>
             <td>$${(item.quantity * item.price).toFixed(2)}</td>
