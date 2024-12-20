@@ -28,7 +28,7 @@ function renderCart() {
             </td>
             <td>$${item.price.toFixed(2)}</td>
             <td>$${(item.quantity * item.price).toFixed(2)}</td>
-            <td><button class="remove-btn" data-id="${item.id}">Remove</button></td>
+            <td><button class="remove-btn" data-id="${item.id}"><img src="imgs/del.png" alt=""></button></td>
         `;
 
         cartItemsContainer.appendChild(row);
