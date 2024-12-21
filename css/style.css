@@ -43,7 +43,7 @@ header .logo img {
 .nav-links a {
     text-decoration: none;
     color: white;
-    font-weight: bold;
+    font-weight: 500;
     transition: color 0.3s;
 }
 
@@ -51,12 +51,19 @@ header .logo img {
     text-shadow: 0 0px 7px rgba(255, 255, 255, 0.5);
 }
 
+.cart {
+    display: flex;
+    justify-content: center;
+}
+
 .cart a {
     text-decoration: none;
     color: #1e1e1e;
     background: white;
     padding: 5px 10px;
+    font-weight: 600;
     border-radius: 5px;
+    border: solid 1px;
     transition: 0.3s;
 }
 
@@ -71,9 +78,8 @@ header .logo img {
     justify-content: space-between;
     align-items: center;
     padding: 50px;
-    background: linear-gradient(white, #CDCDCD);
+    background: linear-gradient(white, #cdcdcd22);
 }
-
 .hero-content {
     max-width: 600px;
 }
