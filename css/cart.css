@@ -7,6 +7,7 @@ body, h1, h2, p, ul, li, table, th, td, button {
 
 body {
     font-family: Arial, sans-serif;
+    line-height: 1.6;
     background-color: #f4f4f4;
     color: #333;
     margin: 0;
@@ -14,12 +15,15 @@ body {
 
 header {
     background: linear-gradient(#333, #1e1e1e);
-    padding: 12px 20px;
+    padding: 10px 20px;
     color: white;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
-
-header .logo img {
+.logo {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.logo img {
     width: 250px;
 }
 
@@ -129,6 +133,12 @@ footer {
     .cart {
         width: 90%;
     }
+    .logo {
+        display: flex;
+        align-self: center;
+        justify-self: center;
+        margin: 10px 0px;
+    }
     .cart-table th, .cart-table td {
         font-size: 0.9rem;
     }
@@ -141,6 +151,12 @@ footer {
 @media (max-width: 425px) {
     .cart h1 {
         font-size: 1.5rem;
+    }
+    
+    .logo {
+        display: flex;
+        align-self: center;
+        justify-self: center;
     }
     .cart-summary p {
         font-size: 0.8rem;
@@ -160,10 +176,20 @@ footer {
         table-layout: fixed;
         overflow-x: auto;
     }
-
+    .logo {
+        display: flex;
+        align-self: center;
+        justify-self: center;
+    }
     .cart-table th, .cart-table td {
         padding: 8px;
         font-size: 0.8rem;
+    }
+
+    .counter {
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
 
     .cart-summary p {
