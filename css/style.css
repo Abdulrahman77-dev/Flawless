@@ -19,7 +19,7 @@ header {
     background: linear-gradient(#333, #1e1e1e);
 }
 
-header .logo img {
+.logo img {
     width: 250px;
 }
 
@@ -239,6 +239,9 @@ footer {
 
 /* Max Width: 1280px */
 @media (max-width: 1280px) {
+    .logo{
+        margin: 10px 0px;
+    }
     .hero {
         flex-direction: column;
     }
